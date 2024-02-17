@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapies.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#e8e7d0;
+    overflow: auto;
+}
+header {
+    background-color: #777474;
+    color: #0c0909;
+    padding: 10px;
+    text-align: center; 
+}
+nav {
+    background-color:#84823c;
+    padding: 10px;
+    
+}
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #312c2c;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#Dashboard{
+    margin-right: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    background-color:#84823c;
+    padding: 10px;   
+}
+#student{
+    margin-right: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    background-color:#84823c;
+    padding: 10px;  
+}
+#Setting{
+    margin-right: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    background-color:#84823c;
+    padding: 10px;
+}
+#logout{
+    margin-right: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    background-color:#84823c;
+    padding: 10px;
+    cursor: pointer;
+}
+nav a:hover {
+color: #ff0000; 
+}
+section {
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #101110;
+}
+tr{
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #100f0f;
+}
+th {
+    background-color: #333;
+    color: #fff;
+}
+h2 {
+    color: #333;
+    margin-top:0;
+}
+
+
+.footer{
+position:sticky;
+bottom:0; right:0;left:0;
+background-color: var(--white);
+border-top:var(--border);
+padding:2.5rem 2rem;
+text-align:center;
+color:var(-black);
+font-size:2rem;
+margin-top: 80em;
+z-index:1000;
+
+}
+.footer span{
+color:var(--main-color)
+}

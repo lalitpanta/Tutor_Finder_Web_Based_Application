@@ -1,0 +1,365 @@
+/* yo chai form box ko ra top ko header ko lagi background pic pani yesmai chha */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.search{
+    float: inline-start;
+    color: white;
+    padding: 10px 50px; 
+    
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8));
+    background-position: center;
+    background-image: url(/PUBLIC/assets/images/hello.jpg);
+    background-size: cover;
+    position: relative;
+}
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding:50px 60px 70px;
+    text-align: center; 
+
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color:#3c00a0;
+    position: relative;
+
+}
+.form-box h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.input-field{
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: max-height 0.5s;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+
+
+}
+
+.input-field i{
+    margin-left: 15px;
+    color: #9999;
+
+}
+form p{
+    text-align: left;
+    color: #3c00a0;
+
+
+}
+
+.btn-field{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+.input-group{
+    height: 280px;
+}
+.btn-field button.disable{
+    background-color: #eaeaea;
+    color: #555;
+}
+.navbar{
+    background-color: rgb(82, 68, 68);
+    border-radius: 30px;
+}
+.navbar ul{
+    overflow: auto;
+}
+
+
+
+
+
+.navbar li{
+        float: left;
+        list-style: none;
+        padding: 3px 3px;
+        padding-top: 8px;
+    }
+.navbar li a{
+    padding:3px 3px ;
+    text-decoration: none;
+    color: white;
+    margin: 13px 20px;
+}
+
+#tutor{
+    float: right;
+    color: white;
+    padding: 10px 12px;
+}
+.navbar input{
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 3px 17px;
+    width: 600px;
+}
+.navbar li a:hover{
+    background-color: rgb(84, 84, 91);
+}
+
+/* yo chai popup botton ko lagi login box ko */
+#popupbotton{
+    float: right;
+    color: white;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#tutor{
+    float: right;
+    color: white;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.poopup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.poopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* this is for footer */
+
+
+    body{
+    background: #eef8ff;
+}
+footer{
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right,#00093c,#2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+
+}
+footer{
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis: 15%;
+}
+.logo{
+    width:150px;
+    margin-bottom: 30px;
+}
+.col h3{
+width: fit-content;
+margin-bottom: 40px;
+position: relative;
+
+}
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #fff;
+    margin: 20px 0;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+
+}
+ul li a{
+    text-decoration: none;
+    color:#fff;
+}
+form{
+    padding-bottom: 15px;
+    display:flex;
+    color: #fff;
+     align-items: center; 
+    justify-content: space-between;
+    border-bottom:1px solid #ccc;
+    margin-bottom: 50px;
+}
+form .far{
+   font-size: 18px;
+   margin-right: 10px;
+  
+} 
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa-solid{
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fab{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+
+}
+.copyright{
+    text-align: center;
+}
+.underline{
+    width:100%;
+    height: 5px;
+    background: #767676;
+    border-radius:3px;
+    position: absolute;
+    left: 0;
+
+}
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+    overflow: hidden;
+
+}
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.radio{
+    width: 90%;
+    display: flex;
+    
+}

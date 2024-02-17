@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple File Upload (Max 2MB)</title>
+    <style>
+          .container{
+            width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding:50px 60px 70px;
+    text-align: center;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        #fileInput {
+            display: none;
+        }
+        label {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+        #fileList {
+            margin-top: 10px;
+            
+        }
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>upload your document</h1>
+
+    <label for="fileInput">Choose files (Max 2MB each)</label>
+    <input type="file" id="fileInput" multiple onchange="validateFiles()" accept=".jpg, .jpeg, .png">
+
+    <div id="fileList"></div>
+    <div id="errorMessage" class="error"></div>
+</div>
+
+    <script>
+        function validateFiles() {
+            var fileInput = document.getElementById('fileInput');
+            var fileListDisplay = document.getElementById('fileList');
+            var errorMessage = document.getElementById('errorMessage');
+            var totalSize = 0;
+
+            errorMessage.textContent = '';
+
+            for (var i = 0; i < fileInput.files.length; i++) {
+                totalSize += fileInput.files[i].size;
+            }
+
+            if (totalSize > 2 * 1024 * 1024) { // Check if total size exceeds 2MB
+                errorMessage.textContent = 'Total file size exceeds 2MB limit.';
+                fileInput.value = '2'; // Clear the file input field
+                fileListDisplay.innerHTML = 'ram,sym'; // Clear the file list
+            } else {
+                fileListDisplay.innerHTML = ''; // Clear the file list
+
+                for (var i = 0; i < fileInput.files.length; i++) {
+                    var listItem = document.createElement('div');
+                    listItem.textContent = 'File ' + (i+1) + ': ' + fileInput.files[i].name + ' (' + (fileInput.files[i].size / 1024).toFixed(2) + ' KB)';
+                    fileListDisplay.appendChild(listItem);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

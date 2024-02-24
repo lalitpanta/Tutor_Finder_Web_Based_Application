@@ -6,6 +6,7 @@
     <title>Admin Dashboard - Tutor Finder</title>
    <link rel="stylesheet" href="/PUBLIC/assets/css/admin.css">
    <script src="/PUBLIC/assets/js/admin_dashboard.js"></script>
+   <script src="/PUBLIC/assets/js/adelete.js" ></script>
 </head>
 <body>
     <header>
@@ -13,42 +14,43 @@
     </header>
     <nav>
         <button type="button" id="Dashboard" >Dashboard</button>
-        <button type="button" id="student">students</button>
+        <button type="button" id="tutor">Tutor</button>
         <button type="button" id="Setting">Setting</button>
       <button type="button" id="logout">Logout</button>  
     </nav>
     <section>
         <h2>Tutors</h2>
+        <!-- yo chai tutor ko data dekhauna chayiyeko table ko row  -->
         <table id="tutorsTable">
            
             <tr>
                 <th>SN</th>
                 <th>Name</th>
-                <th>DOB</th>
+                <th>subjectName</th>
                 <th>email</th>
+                <th>dob</th>
                 <th>phone</th>
                 <th>gender</th>
                 <th>address</th>
-                <th>ID</th>
-                <th>ID_no</th>
-                <th>Issued_authority</th>
+                <th>idtype</th>
+                <th>idNumber</th>
+                <th>issuedAuthority</th>
                 <th>document</th>
                 <th>degree</th>
-                <th>University</th>
-                <th>Institution</th>
-                <th>Cgpa</th>
+                <th>university</th>
+                <th>institution</th>
+                <th>cgpa</th>
                 <th>passed_year</th>
-                <th>Subject</th>
-                <th>license_level</th>
+                <th>license</th>
                 <th>license_no</th>
-                <th>Issued_date</th>
+                <th>issued_date</th>
                 <th>Status</th>
             </tr>
            
 
-            <!-- yo chai sample data ho yo lai chai database ko data le replace garxa paxi-->
+            
             <tbody id="userdata">
-                
+                <!-- yo body ma chai sabai user data haru fill hunxa api bata-->
             </tbody>
         </table>
     </section>  

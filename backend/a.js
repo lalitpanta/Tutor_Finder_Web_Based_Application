@@ -11,7 +11,7 @@ app.use(cors());
 
 
 
-
+//table create garna
 app.get("/createTable",(req,res)=>{
 var username="";
 var email="";
@@ -27,7 +27,7 @@ let sql='CREATE TABLE IF NOT EXISTS user(id INT AUTO_INCREMENT ,name varchar(255
       res.status(200).json({ message: 'Table created successful' });
     });
 })
-//signup
+//signup garna
 app.post('/signup', (req, res) => {
     const { name, email, password ,role } = req.body;
     const sql = 'INSERT INTO user (name, email, password, role) VALUES (?, ?, ?, ?)';
@@ -39,7 +39,7 @@ app.post('/signup', (req, res) => {
       res.status(200).json({ message: 'Signup successful' });
     });
   });
-//sign in
+//login garna
 app.post('/signin', (request, response) => {
 
 
@@ -159,6 +159,32 @@ app.post('/getTutor', (req, res) => {
  
 
   });
+//get all tutor
+app.get('/getAllTutor', (req, res) => {
+  
+
+
+  
+  connection.query('SELECT * FROM tutorinfo', function(error, results, fields){
+      if (error) {
+        throw error;
+      }
+  
+
+  res.json({
+"statusCode":200,
+"info":results
+
+  });
+
+  
+   }
+  );
+
+
+
+});
+
 
 //delete
 
@@ -183,6 +209,95 @@ res.json({
 );
 
 })
+
+
+
+
+
+
+
+
+
+//admin
+app.post("/adminSignup",(req,res)=>{
+  const {name, email,password } = req.body;
+  let createTableSql = 'CREATE TABLE IF NOT EXISTS admins (id INT AUTO_INCREMENT, name varchar(255), email varchar(255), password varchar(255), primary key(id))';
+
+  connection.query(createTableSql, function(err, result) {
+      if (err) {
+          throw err;
+      }
+
+      let searchSql = 'SELECT * FROM admins WHERE email = ?';
+      connection.query(searchSql, [email], function(error, results, fields) {
+          if (error) {
+              throw error;
+          }
+
+          console.log(results.length);
+          if (results.length > 0) {
+              res.send({
+                  "message": "already exist"
+              });
+          } else {
+              const insertSql = 'INSERT INTO admins (name, email, password) VALUES (?, ?, ?)';
+              connection.query(insertSql, [name, email, password,], function(error, results, fields) {
+                  if (error) {
+                      throw error;
+                  }
+
+                  res.json({
+                      "statusCode": 200,
+                      "message": "admin signup  successful "
+                  });
+              });
+          }
+      });
+  });
+
+})
+
+//admin login
+
+app.post("/adminLogin",(req,response)=>{
+  const { email ,password } = req.body;
+  if (email && password) {
+    connection.query('SELECT * FROM admins WHERE email = ? AND password = ?', [email, password], function(error, results, fields){
+if (error) {
+  throw error;
+}
+ if (results.length > 0) {
+console.log("login ok");
+response.json({
+"statusCode":200,
+"message":"admin login successful",
+"name":results[0]['name']
+
+
+});
+}else{
+console.log("email or password wrong");
+response.send("email or password wrong");
+}
+
+}
+);
+}
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const connection = mysql.createConnection({
     host: 'localhost',

@@ -42,13 +42,16 @@
 </head>
 <body>
     <div class="container">
+        <form id="form">
     <h1>upload your document</h1>
 
     <label for="fileInput">Choose files (Max 2MB each)</label>
-    <input type="file" id="fileInput" multiple onchange="validateFiles()" accept=".jpg, .jpeg, .png">
+    <input type="file" name="document" id="fileInput" multiple onchange="validateFiles()" accept=".jpg, .jpeg, .png">
+    <button type="submit">Upload File</button>
 
     <div id="fileList"></div>
     <div id="errorMessage" class="error"></div>
+</form>
 </div>
 
     <script>
@@ -78,6 +81,34 @@
                 }
             }
         }
+
+
+
+
+
+
+
+
+        document.getElementById('form').addEventListener('submit',function(e) {
+        e.preventDefault();
+
+      const userfile =  document.getElementById('fileInput').files[0];
+    //   const usercomments = document.getElementById('comments').value;
+
+     const formdata = new FormData();
+     formdata.append('user-file',userfile,'user-file.jpg');
+     fetch('https://httpbin.org/post',{
+        method:"POST",
+        body:formdata,
+     })
+     .then(res=>res.json())
+     .then(data=>console.log(data))
+     .catch(err =>console.log(err));
+    })
+
+
+
+
     </script>
 </body>
 </html>

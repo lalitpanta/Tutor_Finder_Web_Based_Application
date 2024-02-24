@@ -172,12 +172,7 @@ section{
     width:25em;}
 
 
- /*  overflow: hidden;
-    transition:  2s linear;}
 
-.header .flex .profile .active{
-    max-height:  50em; 
-    transition: max-height 2s linear;}*/
 
 
 .header .flex .profile img{
@@ -348,13 +343,20 @@ nav a:hover {
     tr{
         padding: 15px;
         text-align: center;
-        border-bottom: 1px solid #d0baba;
+        border-bottom: 1px solid #6050be;
+        font-size: 20px
     }
     th {
-        background-color: #61645d;
+        background-color: #8b2b2b;
         color: #fff;
     }
-    h2 {
-        color: #333;
+    h1 {
+        color: #0c0101;
         margin-top:0;
+        font-size: 36px
+    
     }
+
+
+
+

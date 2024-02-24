@@ -4,22 +4,22 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
         
-        // Collect form data
+        // form ko data collect gareko
         const formData = new FormData(form);
 
-        // Convert form data to JSON
+        // json ma convert gareko
         const jsonData = {};
         formData.forEach((value, key) => {
             jsonData[key] = value;
         });
 
-        // Print the JSON data in the console
+        // json data lai console ma print gareko
         console.log('Posted Data:', jsonData);
 
-        // API endpoint URL
+       
         const apiUrl = 'http://localhost:4000/addTutorInfo';
 
-        // POST request configuration
+       
         const requestOptions = {
             method: 'POST',
             headers: {
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify(jsonData)
         };
 
-        // Send POST request to the API
         fetch(apiUrl, requestOptions)
             .then(response => {
                 if (!response.ok) {
@@ -37,14 +36,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                // Handle success response
+                form.reset();
+                // Show the form box again
+                form.style.display = 'block';
+               
                 console.log('Data posted successfully:', data);
-                // You can perform further actions here, such as showing a success message to the user
+                alert('form submitted successfully.');
+               
             })
             .catch(error => {
-                // Handle error
+                
                 console.error('There was a problem posting the data:', error);
-                // You can display an error message to the user or perform any necessary error handling
+                alert('Network problem try again.....');
             });
+            
     });
 });
+
+
+
+

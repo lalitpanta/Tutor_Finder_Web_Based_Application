@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutor finder</title>
     <!-- stylle.css vanne css ko file ko link ho -->
-  <link rel="stylesheet" href="/PUBLIC/assets/css/stylle.css">
-  <script src="/PUBLIC/assets/js/script.js" defer></script>
-  <script src="/PUBLIC/assets/js/app.js"></script>
-  <script src="/PUBLIC/assets/js/signin_app.js"></script>
+<link rel="stylesheet" href="/PUBLIC/assets/css/admin_login.css">
+<script src="/PUBLIC/assets/js/admin_login.js" ></script>
+<script src="/PUBLIC/assets/js/app_admin_login_signin.js" ></script>
+<script src="/PUBLIC/assets/js/admin_signup.js" ></script>
 
   <!-- yo googleapies vanne webbsite bata leko link ho yesle chai font haru vanya jasto milaunu sakinxa -->
   <link rel="stylesheet" href="https://fonts.googleapies.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
@@ -21,18 +21,14 @@
     <div class="container">
 
 
-        <!-- header ma vako sbbai chha -->
+        <!-- yo nav bhitra hamro top ma dekheko kura haru chhha -->
  <nav class="navbar">
             <ul>   
-                <li> <a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li id="about"><a href="#">About</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">contact</a></li>
                 <li id="popupbotton"><a href="#">Login</a></li>
-                <li id="tutor"><a href="#">SignUp</a></li>
+                <li id="tutor"><a href="#">signin</a></li>
             </ul>
         </nav>
-<!-- login ko form box-->
+<!-- student login-->
 <div id="popup" class="popup">
 <div class="form-box">
     <div class="class-content">
@@ -62,13 +58,12 @@
              </div>
           </div>
         </div>
-        <!-- signin ko formbox -->
         <div id="poopup" class="poopup">
             <div class="form-box">
                 <div class="class-content">
                     <span class="close" id="clooseButton">&times;</span>
             
-                    <h1 id="title">SIGNUP</h1>
+                    <h1 id="title">SIGNIN</h1>
                     <!-- yo chai form box ho yesma chai login sign in ko code chha-->
                     <form id="signinForm" action="" method="post">
                         <div class="input-group">  
@@ -86,14 +81,10 @@
                                 <i class="fa-solid fa-lock"></i>
                                 <input type="password" placeholder="password" name="password">
                             </div>
-                            <div class="input-field" id="naamefield">
-                                <input type="text" placeholder="enter your role" name="role">
-                
-                            </div>
                         </div>
                 
                     <div class="btn-field">
-                        <button id="btn" type="submit">SignUp</button>
+                        <button id="btn1" type="submit">Signin</button>
                     </div>
                     </div>
                     </form>
@@ -101,12 +92,6 @@
                       </div>
                     </div>
     </div>
-
-   <iframe src="/PUBLIC/assets/images/border1.png" frameborder="0" height="1px" width="100%"></iframe>
-<iframe src="/PUBLIC/pages/body/body.html" frameborder="1"  height="800px" width="100%"></iframe>
-<iframe src="/PUBLIC/pages/body/body1.html" frameborder="0" height="900px" width="100%"></iframe>
- <iframe src="/PUBLIC/pages/services/service.html" frameborder="0" height="600px" width="100%"></iframe>
-<!-- footer start vo -->
     <footer>
         <div class="foooter">
         <div class="row">

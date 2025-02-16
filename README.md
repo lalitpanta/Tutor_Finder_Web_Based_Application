@@ -1,6 +1,7 @@
 
 Tutor Finder Web Application (College Minor Project)
-By [Lalit Pant]
+
+By Lalit Pant
 
 Tutor Finder is a web-based application created as part of my college minor project. Its main goal is to connect students with qualified tutors quickly, easily, and affordably. The application provides a seamless experience for students to search and interact with tutors, while ensuring that tutors can easily share their knowledge. The project uses:
 

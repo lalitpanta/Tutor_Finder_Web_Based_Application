@@ -1,0 +1,112 @@
+.header {
+    background-color: #3e64ff;
+    color: #fff;
+    padding: 10px;
+}
+
+.header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-form button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.side-bar {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.side-bar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.side-bar h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.data-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-box h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.data-box p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.data-box {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.data-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.data-box p {
+    margin: 5px 0;
+}
